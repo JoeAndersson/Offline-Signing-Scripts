@@ -24,13 +24,15 @@ How to Start the Scripts:
 
 Download both .sh scripts
 
-Put Node-address-importer.sh in your bitcoin-0.21.x/bin folder on your online computer.
+Put Node-address-importer.sh in your /bitcoin-0.21.x/bin folder on your online computer.
 
-Put Offline-address-exporter.sh in your bitcoin-0.21.x/bin folder on your offline computer.
+Put Offline-address-exporter.sh in your /bitcoin-0.21.x/bin folder on your offline computer.
 
 ---Offline:
 
-Right-click in folder, 
+Click Files on the Left hand bar, Navigate to /bitcoin-0.21.x/bin
+
+Right-click in /bitcoin-0.21.x/bin folder, 
 
 Select "Open in Terminal"
 
@@ -40,15 +42,17 @@ Enter "bash Offline-address-exporter.sh" and follow instructions on screen.
 
 ---Node:
 
+Click Files on the Left hand bar, Navigate to /bitcoin-0.21.x/bin
+
 Transfer USB with watch only wallet to your node
 
-Right-click in folder, 
+Right-click in /bitcoin-0.21.x/bin folder, 
 
 Select "Open in Terminal"
 
 Open a new Terminal
 
-Enter "bash Node-address-importer.sh" and follow instructions on screen to create unsigned transaction.
+Enter "bash Node-address-importer.sh" and follow instructions on screen to create the unsigned transaction(s).
 
 End of script. Only core from here on
 
