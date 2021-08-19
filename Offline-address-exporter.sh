@@ -1,9 +1,6 @@
 # Click Files on the Left hand bar, Navigate to home/bitcoin/bin/
 # Move this file into the home/bitcoin/bin/ folder
-# Right click in the /bin/ folder once more and select "open in terminal" and paste the following command:
-# chmod +x Offline-address-exporter.sh
-# Then paste the following command:
-# bash Offline-address-exporter.sh
+# Right click in the /bin/ folder and select "open in terminal" and paste the following command: bash Offline-address-exporter.sh
 
 RED='\033[0;31m'	# for red text
 NC='\033[0m'	# No Color
@@ -96,7 +93,7 @@ else
 	break
 fi
 clear
-echo -e "Your wallet's name is '$walletName'\n\n${RED}You will need a change address if you are not spending the whole UTXO.${NC} \nYou can request another receiving address now and label it change address with today's date and the amount to be sent to it. \nWhen you rescan the blockchain on your node, you will know which one is the change address because it will be empty assuming you are only importing loaded address(es) to spend.\nAddress labels will not be transferred to the watch only wallet."
+echo -e "${RED}Your wallet's name is: $walletName\n\nYou will need a change address if you are not spending the whole UTXO.${NC} \nYou can request another receiving address now and label it change address with today's date and the amount to be sent to it. \nWhen you rescan the blockchain on your node, you will know which one is the change address because it will be empty assuming you are only importing loaded address(es) to spend.\nAddress labels will not be transferred to the watch only wallet."
 enter_ok_to_confirm
 
 adrArray=()	# Empty array that will later contain all the addresses on the encrypted wallet. 
@@ -165,7 +162,7 @@ askAddressesToImport() {			# Function to ask user what address to import
 }
 ./bitcoin-cli createwallet "$watchWalletName" true true	# creates the watch only wallet 
 ./bitcoin-cli loadwallet "$walletName"
-./bitcoin-cli loadwallet "$watchWalletName"	# loads watch only wallet, necessary if rerunning the script
+./bitcoin-cli loadwallet "$watchWalletName"	# loads watch only wallet
 clear
 askAddressesToImport
 
