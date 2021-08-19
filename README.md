@@ -1,6 +1,8 @@
 # Core Offline Signing Scripts
 These scripts allow you to create unsigned transactions from an offline Bitcoin Core wallet.
 
+You can use a bitcoin core wallet in the standard cold storage signing procedure. Create psbt online -> transfer psbt to offline wallet and sign -> transfer psbt online and broadcast.
+
 They require no dependencies outside of Bitcoin Core and use only standard GNU commands; they can be run fully offline.
 
 The scripts cannot touch your private keys as they never require decrypting the wallet.
