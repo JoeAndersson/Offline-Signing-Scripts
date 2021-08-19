@@ -1,8 +1,6 @@
 # Click Files on the Left hand bar, Navigate to home/bitcoin/bin/
 # Move this file into the home/bitcoin/bin/ folder
 # Right click in the /bin/ folder once more and select "open in terminal" and paste the following command:
-# chmod +x Node-address-importer.sh
-# Then paste the following command:
 # bash Node-address-importer.sh
 
 enter_quote_to_continue() {	# Only allows the script to continue when they enter '
@@ -85,7 +83,7 @@ if [ $(./bitcoin-cli listwallets | wc -l) != 3 ]	# Checks if no wallet or multip
 	exit
 fi
 clear
-echo -e "Your watch only wallet is named '$watchWalletName'.\n\nEnter the blockheight of the oldest address you would like to import. If you do not know it, enter 0\n It can take many hours to rescan from the beginning of the blockchain."
+echo -e "${RED}Your watch only wallet is named '$watchWalletName'${NC}.\n\nEnter the blockheight of the oldest address you would like to import. If you do not know it, enter 0\n It can take many hours to rescan from the beginning of the blockchain."
 read -p "Blockheight = " blockHeight 
 clear
 echo -e "Rescanning blockchain from block $blockHeight. It can take hours."
@@ -110,7 +108,7 @@ enter_ok_to_confirm
 pkill bitcoin-qt
 echo -e "Wait until Core is fully closed"
 enter_quote_to_continue
-echo -e "Confirm deleting '$watchWalletName' from this computer."
+echo -e "${RED}Confirm deleting '$watchWalletName'${NC} from this computer."
 enter_ok_to_confirm
 rm -r ~/.bitcoin/wallets/"$watchWalletName"
 echo -e "'$watchWalletName' deleted from .bitcoin/wallets\nScript Complete, sign psbt offline then return online and broadcast. Wipe USB drive afterwards. Scroll up for spending instructions. No psbts should be saved to the online node."
