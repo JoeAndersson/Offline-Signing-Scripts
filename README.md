@@ -1,13 +1,13 @@
 # Core Offline Signing Scripts
-These scripts allow you to create unsigned transactions and confirm transactions from an offline Bitcoin Core wallet.
+These scripts allow you to create unsigned transactions from an offline Bitcoin Core wallet.
 
-They require no dependences outside of Bitcoin Core and uses only standard GNU commands so they can be run fully offline.
+They require no dependencies outside of Bitcoin Core and use only standard GNU commands; they can be run fully offline.
 
-The scripts cannot touch your private keys as they never requires decrypting the wallet.
+The scripts cannot touch your private keys as they never require decrypting the wallet.
 
 Optimized for code review and auditability.
 
-Import only the addresses you need, maximum privacy.
+Import only the addresses you need for maximum privacy; no leaking xpubs.
 
 How to Setup The Scripts:
 
@@ -34,8 +34,6 @@ Select "Open in Terminal"
 
 Open a new Terminal
 
-Enter "chmod +x Offline-address-exporter.sh
-
 Enter "bash Offline-address-exporter.sh" and follow instructions on screen.
 
 ---Node:
@@ -47,8 +45,6 @@ Right-click in folder,
 Select "Open in Terminal"
 
 Open a new Terminal
-
-Enter "chmod +x Node-address-importer.sh
 
 Enter "bash Node-address-importer.sh" and follow instructions on screen to create unsigned transaction.
 
