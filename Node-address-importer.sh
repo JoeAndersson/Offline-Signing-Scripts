@@ -82,7 +82,7 @@ if [ $(./bitcoin-cli listwallets | wc -l) != 3 ]	# Checks if no wallet or multip
 	exit
 fi
 clear
-echo -e "${RED}Your watch only wallet is named '$watchWalletName'${NC}.\n\nEnter the blockheight of the oldest address you would like to import. If you do not know it, enter 0\n It can take many hours to rescan from the beginning of the blockchain."
+echo -e "${RED}Your watch only wallet is named: $watchWalletName ${NC}\n\nEnter the blockheight of the oldest address you would like to import. If you do not know it, enter 0\n It can take many hours to rescan from the beginning of the blockchain."
 read -p "Blockheight = " blockHeight 
 clear
 echo -e "Rescanning blockchain from block $blockHeight. It can take hours."
