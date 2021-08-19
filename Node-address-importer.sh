@@ -1,7 +1,6 @@
 # Click Files on the Left hand bar, Navigate to home/bitcoin/bin/
 # Move this file into the home/bitcoin/bin/ folder
-# Right click in the /bin/ folder once more and select "open in terminal" and paste the following command:
-# bash Node-address-importer.sh
+# Right click in the /bin/ folder and select "open in terminal" and paste the following command: bash Node-address-importer.sh
 
 enter_quote_to_continue() {	# Only allows the script to continue when they enter '
 	echo -e "\nEnter ' to continue."
